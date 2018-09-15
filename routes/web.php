@@ -41,18 +41,10 @@ Auth::routes();
 
 Route::any('/search',function(){
     $search = \Input::get ( 'query' );
-    $searchPost = \App\Post::where('title','LIKE','%'.$search.'%')->orWhere('author','LIKE','%'.$search.'%')->get();
+    $searchPost = \App\Post::where('title','LIKE','%'.$search.'%')->orWhere('author','LIKE','%'.$search.'%')->orWhere('tags','LIKE','%'.$search.'%')->get();
     $articleType = \Input::get('type');
 
-    if($articleType == 1){
-        $returnView = "news";
-    }elseif($articleType == 2){
-        $returnView = "sports";
-    }elseif($articleType == 4){
-        $returnView = "articles";
-    }else{
-        $returnView = "playlists";
-    }
+    $returnView = "blog/posts";
 
     if(count($searchPost) > 0)
         return view($returnView)->withSearch($searchPost)->withQuery($search);
