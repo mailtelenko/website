@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 class PagesController extends Controller{
     public function getIndex(){
-        return view('welcome')->withTitle('Home');
+        return view('blog')->withTitle('Blog');
     }
     
     public function getAbout(){
@@ -31,6 +31,10 @@ class PagesController extends Controller{
         return view("/posts")->withTitle("Posts");
     }
     
+    public function getBlog(){
+        return view("/blog")->withTitle("blog");
+    }
+
     public function getContact(){
         return view("/contact")->withTitle("Contact");
     }
