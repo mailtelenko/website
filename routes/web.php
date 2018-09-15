@@ -44,7 +44,7 @@ Route::any('/search',function(){
     $searchPost = \App\Post::where('title','LIKE','%'.$search.'%')->orWhere('author','LIKE','%'.$search.'%')->orWhere('tags','LIKE','%'.$search.'%')->get();
     $articleType = \Input::get('type');
 
-    $returnView = "blog/posts";
+    $returnView = "posts";
 
     if(count($searchPost) > 0)
         return view($returnView)->withSearch($searchPost)->withQuery($search);
