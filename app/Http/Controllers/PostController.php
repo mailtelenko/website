@@ -71,32 +71,19 @@ class PostController extends Controller
         $post->intro = $request->intro;
         $post->tags = $request->tags;
         
-        if($request->type == "Sport"){
-            $post->sport = "true";
-        }elseif($request->type == "Article"){
-            $post->sport = "article";
-        }elseif($request->type =="News"){
-            $post->sport = "false";
-        }else{
-            $post->sport = "playlist";
-        }
+        $post->sport = "false";
         
                //Save
         $post->save();
-        
-        //If not playlist post
-        if($request->type != "Playlist"){            
-            //Create Directory for res Img
-            $id = \DB::table('posts')->max('id');
-            mkdir("img/posts/".$id,0777,true);
-        
-            //Move head image to directory
-            $head = $request->file('headImg');
-            $fileType = $head->getClientOriginalExtension();
-            $head->move("img/posts/".$id, "head".".".$fileType);   
-        }else{
-            $post->sport="playlist";
-        } 
+
+        //Create Directory for res Img
+        $id = \DB::table('posts')->max('id');
+        mkdir("img/posts/".$id,0777,true);
+    
+        //Move head image to directory
+        $head = $request->file('headImg');
+        $fileType = $head->getClientOriginalExtension();
+        $head->move("img/posts/".$id, "head".".".$fileType);    
         
         return redirect()->route('posts.show', $post->id);
         }
