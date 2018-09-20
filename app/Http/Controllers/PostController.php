@@ -175,7 +175,8 @@ class PostController extends Controller
             //Move head image to directory
             $head = $request->file('headImg');
             $fileType = $head->getClientOriginalExtension();
-            unlink("img/posts/".$id."head".".".$fileType);
+            if(file_exists("img/posts/".$id."head".".".$fileType))
+                unlink("img/posts/".$id."head".".".$fileType);
             $head->move("img/posts/".$id."head".".".$fileType);   
         }
         }
