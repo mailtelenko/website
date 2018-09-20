@@ -1,13 +1,32 @@
-@extends('layouts.app') @section('content')
+@extends('layouts.app') 
+@section('content')
 
 <div class="container-fluid post top-title post-full">
 
     <div class="row">
         <div class="col-sm-12 col-md-6">
-            <h2 id="page-title" style="margin-bottom:0px;padding:10px;">About</h2>
+            <h2 id="page-title" style="margin-bottom:0px;padding:10px;">Contact Me</h2>
         </div>
     </div>
 </div>
+
+<div class="container-fluid post post-full">
+    <div id="socialLinks" class="row">
+        <div class="col-sm-3">
+            <i class="socialLink fab fa-github"></i>
+        </div>
+        <div class="col-sm-3">
+            <i class="socialLink fab fa-twitter"></i>
+        </div>
+        <div class="col-sm-3">
+            <i class="socialLink fab fa-facebook"></i>
+        </div>
+        <div class="col-sm-3">
+            <i class="socialLink fab fa-linkedin"></i>
+        </div>
+    </div>
+</div>
+
 <div class="container-fluid post post-full">
     <script>
         window.fbAsyncInit = function() {
@@ -28,7 +47,6 @@
             js.src = "//connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-
     </script>
 
     <div class="row">
@@ -40,7 +58,7 @@
             ?>
                 {{Form::open([ 'method' => 'POST', 'route' => 'posts.store' ])}}
                 <div class="contact">
-                    <p>Send us an email:</p>
+                    <p>Send me an email:</p>
                     <hr class="nomargin" />
                     <input name="name" class="form-control" placeholder="Name" type="text">
                     <input name="email" class="form-control" placeholder="Email" type="email">
