@@ -176,8 +176,8 @@ class PostController extends Controller
             $head = $request->file('headImg');
             $fileType = $head->getClientOriginalExtension();
             if(file_exists("img/posts/".$id."head".".".$fileType))
-                unlink("img/posts/".$id."head".".".$fileType);
-            $head->move("img/posts/".$id."head".".".$fileType);   
+                unlink("img/posts/".$id."/head".".".$fileType);
+            $head->move("img/posts/".$id."/head".".".$fileType);   
         }
         }
         return view("lumino/posts");
