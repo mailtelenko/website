@@ -83,7 +83,7 @@ class PostController extends Controller
         //Move head image to directory
         $head = $request->file('headImg');
         $fileType = $head->getClientOriginalExtension();
-        $head->move("img/posts/".$id, "head".".".$fileType);    
+        $head->move("img/posts/".$id."head".".".$fileType);    
         
         return redirect()->route('posts.show', $post->id);
         }
@@ -171,11 +171,12 @@ class PostController extends Controller
         
         $post->save();
         
-        if (isset($post->headImg)){
+        if (isset($request->headImg)){
             //Move head image to directory
             $head = $request->file('headImg');
             $fileType = $head->getClientOriginalExtension();
-            $head->move("img/posts/".$id. "head".".".$fileType);   
+            unlink("img/posts/".$id."head".".".$fileType);
+            $head->move("img/posts/".$id."head".".".$fileType);   
         }
         }
         return view("lumino/posts");
