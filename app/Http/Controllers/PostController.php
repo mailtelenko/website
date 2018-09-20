@@ -175,7 +175,7 @@ class PostController extends Controller
             //Move head image to directory
             $head = $request->file('headImg');
             $fileType = $head->getClientOriginalExtension();
-            $head->move("img/posts/".$id, "head".".".$fileType);   
+            $head->move("img/posts/".$id. "head".".".$fileType);   
         }
         }
         return view("lumino/posts");
