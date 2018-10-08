@@ -33,47 +33,40 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function map()
-    {
+    public function map(){
         $this->mapApiRoutes();
 
         $this->mapWebRoutes();
 
-        //
     }
 
-    /**
-     * Define the "web" routes for the application.
-     *
-     * These routes all receive session state, CSRF protection, etc.
-     *
-     * @return void
-     */
-    protected function mapWebRoutes()
-    {
-        Route::group([
-            'middleware' => 'web',
-            'namespace' => $this->namespace,
-        ], function ($router) {
-            require base_path('routes/web.php');
-        });
+    private function baseDomain(string $subdomain = ''): string{
+        if (strlen($subdomain) > 0) {
+            $subdomain = "{$subdomain}.";
+        }
+
+        return $subdomain . config('app.base_domain');
     }
 
-    /**
-     * Define the "api" routes for the application.
-     *
-     * These routes are typically stateless.
-     *
-     * @return void
-     */
-    protected function mapApiRoutes()
+    protected function mapApiRoutes(){
+        Route::domain($this->baseDomain())
+             ->middleware('api')
+             ->namespace($this->namespace)
+             ->group(base_path('routes/api.php'));
+    }
+
+    protected function mapWebRoutes(){
+        Route::domain($this->baseDomain())
+             ->middleware('web')
+             ->namespace($this->namespace)
+             ->group(base_path('routes/web.php'));
+    }
+
+    protected function mapAdminRoutes()
     {
-        Route::group([
-            'middleware' => 'api',
-            'namespace' => $this->namespace,
-            'prefix' => 'api',
-        ], function ($router) {
-            require base_path('routes/api.php');
-        });
+        Route::domain($this->baseDomain('admin'))
+             ->middleware('web')
+             ->namespace($this->namespace)
+             ->group(base_path('routes/admin.php'));
     }
 }

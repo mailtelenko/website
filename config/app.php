@@ -232,4 +232,6 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
     ],
 
+    'base_domain' => env('APP_BASE_DOMAIN'),
+
 ];
