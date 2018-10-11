@@ -1,4 +1,4 @@
-@extends('etm.layouts.app') 
+@extends('ETM.layouts.app') 
 @section('content')
     <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
     <!--
