@@ -52,6 +52,22 @@ Route::any('/search',function(){
         return view ($returnView)->withMessage('No posts found')->withQuery($search);
 });
 
-Route::group(['domain' => 'edgy.liamtelenko.tk'], function() {
-    Route::get("/", "PagesController@getETM");
-});
+
+Route::group(array('domain' => Request::server('HTTP_HOST')), function() {  
+    
+    $value1 = 'edgy';
+    $value2 ='admin';
+    $url = Request::server('HTTP_HOST');
+    $check1 = str_contains($url, $value1);
+    $check2 = str_contains($url, $value2);
+
+    if($check1 == true){            
+        Route::get("/", "PagesController@getETM");
+    }
+
+    if($check2 == true){            
+        // Routes
+    }else{
+        // Routes
+    }
+}
