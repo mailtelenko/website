@@ -32,7 +32,7 @@ if(!isset($title)){
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet ">
     <!-- Custom Stuff -->
-    <link href="{{ asset('css/master-css.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/etm-master-css.css') }}" rel="stylesheet" type="text/css">
     <link href="{{asset('css/pace-theme.css')}}" rel="stylesheet" type="text/css">
 
     <!-- Scripts -->

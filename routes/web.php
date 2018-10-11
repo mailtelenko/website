@@ -53,6 +53,9 @@ Route::any('/search',function(){
 });
 
 
+Route::get("/edgy", "PagesController@getETM");
+
+/*
 Route::group(array('domain' => Request::server('HTTP_HOST')), function() {  
     
     $value1 = 'edgy';
@@ -71,3 +74,4 @@ Route::group(array('domain' => Request::server('HTTP_HOST')), function() {
         // Routes
     }
 });
+*/

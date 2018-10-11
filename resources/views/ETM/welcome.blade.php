@@ -1,4 +1,4 @@
-@extends('layouts.app') 
+@extends('etm.layouts.app') 
 @section('content')
     <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
     <!--
@@ -41,9 +41,10 @@
             </div>
             <div class="col-sm-12">
                 <div style="text-align:center;" class="post post-full">
-                <h2>Recent Content</h2>
+                <h2>Quality Content</h2>
                 <hr/>
-                <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/0055618a654250d3870fc9b7498d3e6f.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>    
+                Content under curation.
+                <!-- LightWidget WIDGET <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/0055618a654250d3870fc9b7498d3e6f.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>    -->
             </div>
             </div>
             <div class="col-sm-12">
