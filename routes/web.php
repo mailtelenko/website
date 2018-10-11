@@ -70,4 +70,4 @@ Route::group(array('domain' => Request::server('HTTP_HOST')), function() {
     }else{
         // Routes
     }
-}
+});
