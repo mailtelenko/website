@@ -40,33 +40,23 @@ class RouteServiceProvider extends ServiceProvider
 
     }
 
-    private function baseDomain(string $subdomain = ''): string{
-        if (strlen($subdomain) > 0) {
-            $subdomain = "{$subdomain}.";
-        }
-
-        return $subdomain . config('app.base_domain');
+    protected function mapWebRoutes()
+    {
+        Route::group([
+            'middleware' => 'web',
+            'namespace' => $this->namespace,
+        ], function ($router) {
+            require base_path('routes/web.php');
+        });
     }
 
     protected function mapApiRoutes(){
-        Route::domain($this->baseDomain())
-             ->middleware('api')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/api.php'));
-    }
-
-    protected function mapWebRoutes(){
-        Route::domain($this->baseDomain())
-             ->middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
-    }
-
-    protected function mapAdminRoutes()
-    {
-        Route::domain($this->baseDomain('admin'))
-             ->middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/admin.php'));
+            Route::group([
+                'middleware' => 'api',
+                'namespace' => $this->namespace,
+                'prefix' => 'api',
+            ], function ($router) {
+                require base_path('routes/api.php');
+            });
     }
 }

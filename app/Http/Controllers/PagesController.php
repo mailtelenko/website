@@ -46,5 +46,9 @@ class PagesController extends Controller{
     public function getRegister(){
         return view("/auth/newRegister")->withTitle("Register");
     }
-    
+ 
+    //Edgy Teen Memez
+    public function getETM(){
+        return view("/ETM/welcome");
+    }
 }

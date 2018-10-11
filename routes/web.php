@@ -51,3 +51,7 @@ Route::any('/search',function(){
     else 
         return view ($returnView)->withMessage('No posts found')->withQuery($search);
 });
+
+Route::group(['domain' => 'edgy.127.0.0.1:8000'], function() {
+    Route::get("/", "PagesController@getETM");
+});
