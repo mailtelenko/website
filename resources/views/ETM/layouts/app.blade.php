@@ -66,7 +66,7 @@ if(!isset($title)){
         <nav>
             <!-- Vertical navbar -->
             <div class="navbar">
-                <a style="z-index:10" class="navbar-brand" href="/"><img src="https://instagram.fybz2-2.fna.fbcdn.net/vp/71cd669d800e748d7614c05f69da6f18/5C5DC09C/t51.2885-19/s150x150/40567046_267780097200199_9152384224681000960_n.jpg"/></a>
+                <a style="z-index:10" class="navbar-brand" href="#"><img src="https://instagram.fybz2-2.fna.fbcdn.net/vp/71cd669d800e748d7614c05f69da6f18/5C5DC09C/t51.2885-19/s150x150/40567046_267780097200199_9152384224681000960_n.jpg"/></a>
                 <!-- Brand -->
                 <!--
                 <span class="openMenu"><i class="far fa-compass"></i></span>
