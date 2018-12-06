@@ -41,9 +41,9 @@
             </div>
             <div class="col-sm-12">
                 <div style="text-align:center;" class="post post-full">
-                <h2>Quality Content</h2>
+                <h2>Stickers!</h2>
                 <hr/>
-                Content under curation.
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfPJ2OvwHdjoRzefP7ZI4gtaSM-fT8-8GdzC8KsHzH2wtQicg/viewform?embedded=true" width="640" height="751" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
                 <!-- LightWidget WIDGET <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/0055618a654250d3870fc9b7498d3e6f.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>    -->
             </div>
             </div>
