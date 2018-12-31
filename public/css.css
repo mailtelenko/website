@@ -1,0 +1,143 @@
+/*
+Main Stylesheet
+Liam Telenko - 2018
+*/
+
+/* Main Section */
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fcfcfc;
+}
+
+/* Header Section */
+
+.header {
+    text-align: center;
+    margin-top: 40px;
+    background-color: white;
+    padding: 3vw;
+    border-radius: 8px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, .1);
+    transition-duration: .2s;
+}
+
+/* Header chevron */
+.header i {
+    margin-top: 20px;
+    font-size: 20px;
+    transition-duration: .4s;
+}
+
+.header p {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, .02);
+    border-radius: 10px;
+    margin-top: 30px;
+    display: none;
+}
+
+.header:hover {
+    cursor: pointer;
+    transform: scale(1.02, 1.02);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+    transition-duration: .2s;
+}
+
+.header img {
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+    margin-bottom: 30px;
+}
+
+/* Items */
+
+.content {
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center;
+    margin-top: 40px;
+    background: white;
+    background-size: 100% 100%;
+    padding: 3vw;
+    border-radius: 8px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, .1);
+    color: black;
+    transition-duration: .2s;
+    outline: 0;
+}
+
+.content:hover {
+    background: linear-gradient(236deg, #1ba900, #246655, #d17615, #155fd1, #a315d1, #d11538);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: hoverAnimation 16s ease infinite;
+    -moz-animation: hoverAnimation 16s ease infinite;
+    animation: hoverAnimation 16s ease infinite;
+
+    transform: scale(1.04, 1.04);
+    transition-duration: 1s;
+
+    color: white;
+}
+
+/* Icon */
+
+.content i {
+    font-size: 70px;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 50px;
+}
+
+/* Animations */
+
+@-webkit-keyframes hoverAnimation {
+    0% {
+        background-position: 0% 99%
+    }
+
+    50% {
+        background-position: 100% 2%
+    }
+
+    100% {
+        background-position: 0% 99%
+    }
+}
+
+@-moz-keyframes hoverAnimation {
+    0% {
+        background-position: 0% 99%
+    }
+
+    50% {
+        background-position: 100% 2%
+    }
+
+    100% {
+        background-position: 0% 99%
+    }
+}
+
+@keyframes hoverAnimation {
+    0% {
+        background-position: 0% 99%
+    }
+
+    50% {
+        background-position: 100% 2%
+    }
+
+    100% {
+        background-position: 0% 99%
+    }
+}
