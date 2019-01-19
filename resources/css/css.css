@@ -41,9 +41,8 @@ body {
     transition-duration: .4s;
 }
 
-.description{
+#description{
     display:none;
-    transition-duration:.2s;
 }
 
 .header p {
