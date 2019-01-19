@@ -3,6 +3,14 @@ Main Stylesheet
 Liam Telenko - 2018
 */
 
+/* Var Declaration */
+:root{
+    --background_colour: #fcfcfc;
+    --container_colour: #ffffff;
+    --text_colour: #000000;
+    --text_hover: #ffffff;
+}
+
 /* Main Section */
 
 * {
@@ -10,15 +18,16 @@ Liam Telenko - 2018
 }
 
 body {
-    background-color: #fcfcfc;
+    background-color: var(--background_colour);
 }
 
 /* Header Section */
 
 .header {
+    color: var(--text_colour);
     text-align: center;
     margin-top: 40px;
-    background-color: white;
+    background-color: var(--container_colour);
     padding: 3vw;
     border-radius: 8px;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, .1);
@@ -32,12 +41,17 @@ body {
     transition-duration: .4s;
 }
 
+.description{
+    display:none;
+    transition-duration:.2s;
+}
+
 .header p {
     padding: 20px;
     background-color: rgba(0, 0, 0, .02);
     border-radius: 10px;
     margin-top: 30px;
-    display: none;
+    display: block;
 }
 
 .header:hover {
@@ -60,12 +74,12 @@ body {
     margin-left: 10px;
     text-align: center;
     margin-top: 40px;
-    background: white;
+    background: var(--container_colour);
     background-size: 100% 100%;
     padding: 3vw;
     border-radius: 8px;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, .1);
-    color: black;
+    color: var(--text_colour);
     transition-duration: .2s;
     outline: 0;
 }
@@ -81,7 +95,7 @@ body {
     transform: scale(1.04, 1.04);
     transition-duration: 1s;
 
-    color: white;
+    color: var(--text_hover);
 }
 
 /* Icon */
