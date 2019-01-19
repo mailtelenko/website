@@ -106,6 +106,7 @@ body {
 
 /* Footer */
 footer {
+    color: var(--text_colour);
     text-align: center;
     font-size: 12px;
     margin-top: 50px;
