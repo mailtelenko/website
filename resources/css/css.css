@@ -4,7 +4,8 @@ Liam Telenko - 2018
 */
 
 /* Var Declaration */
-:root{
+
+:root {
     --background_colour: #fcfcfc;
     --container_colour: #ffffff;
     --text_colour: #000000;
@@ -35,14 +36,16 @@ body {
 }
 
 /* Header chevron */
+
 .header i {
     margin-top: 20px;
     font-size: 20px;
     transition-duration: .4s;
 }
 
-#description{
-    display:none;
+#description {
+    display: none;
+    overflow:hidden;
 }
 
 .header p {
@@ -86,14 +89,11 @@ body {
 .content:hover {
     background: linear-gradient(236deg, #1ba900, #246655, #d17615, #155fd1, #a315d1, #d11538);
     background-size: 1200% 1200%;
-
     -webkit-animation: hoverAnimation 16s ease infinite;
     -moz-animation: hoverAnimation 16s ease infinite;
     animation: hoverAnimation 16s ease infinite;
-
     transform: scale(1.04, 1.04);
     transition-duration: 1s;
-
     color: var(--text_hover);
 }
 
@@ -105,6 +105,7 @@ body {
 }
 
 /* Footer */
+
 footer {
     color: var(--text_colour);
     text-align: center;
@@ -118,11 +119,9 @@ footer {
     0% {
         background-position: 0% 99%
     }
-
     50% {
         background-position: 100% 2%
     }
-
     100% {
         background-position: 0% 99%
     }
@@ -132,11 +131,9 @@ footer {
     0% {
         background-position: 0% 99%
     }
-
     50% {
         background-position: 100% 2%
     }
-
     100% {
         background-position: 0% 99%
     }
@@ -146,11 +143,9 @@ footer {
     0% {
         background-position: 0% 99%
     }
-
     50% {
         background-position: 100% 2%
     }
-
     100% {
         background-position: 0% 99%
     }

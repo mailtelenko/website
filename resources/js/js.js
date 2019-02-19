@@ -4,7 +4,7 @@ $(document).ready(function () {
     var currentHour = new Date($.now()).getHours();
 
     // Check what time it is and if the dark theme should be applied
-    if (currentHour > 21 || currentHour < 8) {
+    if (currentHour >= 19 || currentHour <= 8) {
         // Reset CSS colour variables to dark theme
         document.querySelector(":root").style.setProperty('--background_colour', "#2b2b2b");
         document.querySelector(":root").style.setProperty('--container_colour', "#252526");

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Edgy Teen Memez</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#5a0606">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="resources/css/css.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/edgy.css" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-sm-12 col-md-5 header mx-auto">
+                <!-- Image -->
+                <img src="https://instagram.fybz2-2.fna.fbcdn.net/vp/952125cf9053ce8f360fc8ab7572a38b/5CE9B99D/t51.2885-19/s150x150/51427989_361496147786529_3835845754597933056_n.jpg?_nc_ht=instagram.fybz2-2.fna.fbcdn.net"
+                    alt="Profile Photo">
+                <!-- Title -->
+                <a style="color:white;" target="_blank" uhref="https://www.instagram.com/edgyteenmemez/">
+                    <h1>@edgyteenmemez</h1>
+                </a>
+                <!-- Description -->
+                <div id="description">
+                    <button id="download_certificate">Become an Edge-Lord</button>
+                </div>
+                <!-- Image -->
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- Scripts -->
+<!-- JQuery -->
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<!-- Custom -->
+<script src="resources/js/js.js"></script>
+<script>
+    $('#download_certificate').click(function (e) {
+        e.preventDefault();
+        window.location.href = 'resources/etm/edgelord_certificate.pdf';
+    });
+</script>
+
+</html>
