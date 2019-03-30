@@ -76,21 +76,19 @@ body {
     margin-left: 10px;
     text-align: center;
     margin-top: 40px;
-    background: var(--container_colour);
-    background-size: 100% 100%;
+    background: linear-gradient(236deg, var(--container_colour), var(--container_colour), #1ba900, #246655, #d17615, #155fd1, #a315d1, #d11538);
+    background-size: 1200% 1200%;
+    background-position:95% 0%;
     padding: 3vw;
     border-radius: 8px;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, .1);
     color: var(--text_colour);
-    transition-duration: .2s;
+    animation: endHover 1s ease;
+    transition-duration: 1s;
     outline: 0;
 }
 
 .content:hover {
-    background: linear-gradient(236deg, #1ba900, #246655, #d17615, #155fd1, #a315d1, #d11538);
-    background-size: 1200% 1200%;
-    -webkit-animation: hoverAnimation 16s ease infinite;
-    -moz-animation: hoverAnimation 16s ease infinite;
     animation: hoverAnimation 16s ease infinite;
     transform: scale(1.04, 1.04);
     transition-duration: 1s;
@@ -115,38 +113,20 @@ footer {
 
 /* Animations */
 
-@-webkit-keyframes hoverAnimation {
-    0% {
-        background-position: 0% 99%
-    }
-    50% {
-        background-position: 100% 2%
-    }
-    100% {
-        background-position: 0% 99%
-    }
-}
-
-@-moz-keyframes hoverAnimation {
-    0% {
-        background-position: 0% 99%
-    }
-    50% {
-        background-position: 100% 2%
-    }
-    100% {
-        background-position: 0% 99%
-    }
-}
-
 @keyframes hoverAnimation {
     0% {
-        background-position: 0% 99%
+        background-position: 95% 0%
     }
     50% {
-        background-position: 100% 2%
+        background-position: 0% 99%
     }
     100% {
-        background-position: 0% 99%
+        background-position: 95% 0%
+    }
+}
+
+@keyframes endHover {
+    100% {
+        background-position: 100% 0%
     }
 }
