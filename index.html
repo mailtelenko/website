@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
 
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Custom Stylesheet-->
     <link href="resources/css/css.css" type="text/css" rel="stylesheet">
 
@@ -26,7 +29,7 @@
 
 <body>
     <!-- Header -->
-    <div class="container">
+    <div data-aos="zoom-out-up" data-aos-delay="200" id="heading_section" class="container">
         <div class="row align-items-center">
             <div class="col-sm-12 col-md-5 header mx-auto">
                 <!-- Image -->
@@ -43,9 +46,30 @@
         </div>
     </div>
 
-    <!-- Links -->
-    <div class="container">
+    <div id="lower_heading_section" class="container-fluid">
         <div class="row align-items-center">
+            <div data-aos="fade-up" data-aos-delay="280" class="col">
+                <a id="about_button">
+                <i class="far fa-id-badge"></i>
+                <p>About</p>
+                </a>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300" class="col">
+                <a id="contact_button">
+                <i class="fas fa-phone"></i>
+                <p>Contact</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Links -->
+    <div id="contact_section" class="container">
+        <div class="row align-items-center">
+            <h2 data-aos="fade-in">Let's get in touch.</h2>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="50" class="row align-items-center">
             <a href="https://github.com/mailtelenko" target="_blank" class="col content">
                 <!-- Image -->
                 <i class="fab fa-github"></i>
@@ -55,12 +79,16 @@
                 <i class="fab fa-linkedin"></i>
             </a>
         </div>
-        <div class="row align-items-center">
+        <div data-aos="fade-up" data-aos-delay="250" class="row align-items-center">
             <a href="mailto:mailtelenko@gmail.com" target="_blank" class="col content">
                 <!-- Image -->
                 <i class="far fa-envelope"></i>
             </a>
         </div>
+    </div>
+
+    <div id="toggle_dark_mode">
+        <i id="toggle_light" class="far fa-moon"></i>
     </div>
 
     <!-- Footer -->
@@ -72,6 +100,25 @@
 <!-- Scripts -->
 <!-- JQuery -->
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+        
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 140, // values from 0 to 3000, with step 50ms
+        duration: 400, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    });
+</script>
 <!-- Custom -->
 <script src="resources/js/js.js"></script>
 
