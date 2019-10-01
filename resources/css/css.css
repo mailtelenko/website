@@ -6,7 +6,7 @@ Liam Telenko - 2018
 /* Var Declaration */
 
 :root {
-    --background_colour: #fcfcfc;
+    --background_colour: #f8f8f8;
     --container_colour: #ffffff;
     --text_colour: #000000;
     --text_hover: #ffffff;
@@ -20,7 +20,7 @@ Liam Telenko - 2018
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 body {
     background-color: var(--background_colour);
@@ -29,9 +29,10 @@ body {
 /* Header Section */
 
 .header {
+    position: relative;
     color: var(--text_colour);
     text-align: center;
-    margin-top: 40px;
+    margin-top: 8vh;
     background-color: var(--container_colour);
     padding: 3vw;
     border-radius: 8px;
@@ -49,12 +50,16 @@ body {
 
 #description {
     display: none;
-    overflow:hidden;
+    overflow: hidden;
+}
+
+.header h1 {
+    font-size: 1.9em;
 }
 
 .header p {
     padding: 20px;
-    background-color: rgba(0, 0, 0, .02);
+    background-color: rgba(0, 0, 0, .03);
     border-radius: 10px;
     margin-top: 30px;
     display: block;
@@ -69,45 +74,49 @@ body {
 
 .header img {
     border-radius: 100%;
+    width: 40vw;
+    max-width: 210px;
+    margin-top: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
     margin-bottom: 30px;
 }
 
 /* Subheading */
 h2 {
+    margin-top: 8vh;
     color: var(--text_colour);
-    padding:10px;
-    font-size:28pt;
+    font-size: 2.2em;
+    width:60%;
 }
 
 /* Heading Section */
 #heading_section {
-    height:105vh;
+    height: 105vh;
 }
 
 #lower_heading_section {
-    position:absolute;
-    text-align:center;
-    bottom: 5vh;
-    left:0px;
-    color:var(--text_colour);
-    font-size:60px;
-    width:80vw;
-    margin:0px;
-    margin-left:10vw;
+    position: absolute;
+    text-align: center;
+    bottom: 8vh;
+    left: 0px;
+    color: var(--text_colour);
+    font-size: 60px;
+    width: 80vw;
+    margin: 0px;
+    margin-left: 10vw;
 }
 
-#lower_heading_section p{
-    font-size:12px;
+#lower_heading_section p {
+    font-size: 12px;
 }
 
-#lower_heading_section i:hover{
-    transform: scale(1.08,1.08);
+#lower_heading_section i:hover {
+    transform: scale(1.08, 1.08);
     transition-duration: .2s;
     cursor: pointer;
 }
 
-#lower_heading_section i{
+#lower_heading_section i {
     transition-duration: .2s;
 }
 
@@ -120,7 +129,7 @@ h2 {
     margin-top: 40px;
     background: linear-gradient(236deg, var(--container_colour), var(--container_colour), #1ba900, #246655, #d17615, #155fd1, #a315d1, #d11538);
     background-size: 1200% 1200%;
-    background-position:95% 0%;
+    background-position: 95% 0%;
     padding: 3vw;
     border-radius: 8px;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, .1);
@@ -144,13 +153,42 @@ h2 {
     padding: 20px;
 }
 
+/* Dark mode toggle */
+#dark_mode_toggle {
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+
+    width: 2.2em;
+    height: 2.2em;
+
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 100vw;
+    transition-duration:.2s;
+}
+
+#dark_mode_toggle i{
+    margin:0px;
+    font-size: 1.4em;
+    line-height: 1.5em;
+}
+
+#dark_mode_toggle:hover {
+    transform: scale(1.08, 1.08);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, .1);
+    transition-duration:.2s;
+}
+
 /* Footer */
 
 footer {
     color: var(--text_colour);
     text-align: center;
-    font-size: 12px;
-    margin-top: 50px;
+    font-size: .8em;
+    margin-top: 10vh;
+    margin-bottom:1vh;
 }
 
 /* Animations */
@@ -159,9 +197,11 @@ footer {
     0% {
         background-position: 95% 10%
     }
+
     50% {
         background-position: 0% 99%
     }
+
     100% {
         background-position: 99% 0%
     }

@@ -12,8 +12,8 @@
 
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -22,8 +22,8 @@
     <link href="resources/css/css.css" type="text/css" rel="stylesheet">
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 </head>
 
@@ -31,14 +31,19 @@
     <!-- Header -->
     <div data-aos="zoom-out-up" data-aos-delay="200" id="heading_section" class="container">
         <div class="row align-items-center">
-            <div class="col-sm-12 col-md-5 header mx-auto">
+            <div class="col-11 col-sm-11 col-md-10 col-lg-5 header mx-auto">
+                <!-- Dark mode toggle -->
+                <div id="dark_mode_toggle">
+                    <i id="toggle_light" class="far fa-moon"></i>
+                </div>
                 <!-- Image -->
                 <img src="resources/images/Liam_Telenko.jpg" alt="Profile Photo">
                 <!-- Title -->
                 <h1>Liam Telenko</h1>
                 <!-- Description -->
                 <div id="description">
-                    <p>I am a first year engineering student at McMaster University in Hamilton, Ontario. I am an avid developer who creates fluid layouts and efficient code.</p>
+                    <p>I am a first year engineering student studying at McMaster University in Hamilton, Ontario. I am
+                        an avid developer who creates fluid layouts and efficient code.</p>
                 </div>
                 <!-- Image -->
                 <i class="fas fa-chevron-down"></i>
@@ -50,14 +55,14 @@
         <div class="row align-items-center">
             <div data-aos="fade-up" data-aos-delay="280" class="col">
                 <a id="about_button">
-                <i class="far fa-id-badge"></i>
-                <p>About</p>
+                    <i class="far fa-id-badge"></i>
+                    <p>About</p>
                 </a>
             </div>
             <div data-aos="fade-up" data-aos-delay="300" class="col">
                 <a id="contact_button">
-                <i class="fas fa-phone"></i>
-                <p>Contact</p>
+                    <i class="fas fa-phone"></i>
+                    <p>Contact</p>
                 </a>
             </div>
         </div>
@@ -66,29 +71,29 @@
     <!-- Links -->
     <div id="contact_section" class="container">
         <div class="row align-items-center">
-            <h2 data-aos="fade-in">Let's get in touch.</h2>
+            <div class="col-11 col-sm-12 col-md-12 mx-auto">
+                <h2 data-aos="fade-in">Let's get in touch.</h2>
+            </div>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="50" class="row align-items-center">
-            <a href="https://github.com/mailtelenko" target="_blank" class="col content">
-                <!-- Image -->
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/liamtelenko/" target="_blank" class="col content">
-                <!-- Image -->
-                <i class="fab fa-linkedin"></i>
-            </a>
+        <div class="col-11 col-sm-11 col-md-12 mx-auto">
+            <div data-aos="fade-up" data-aos-delay="50" class="row align-items-center">
+                <a href="https://github.com/mailtelenko" target="_blank" class="col content">
+                    <!-- Image -->
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/liamtelenko/" target="_blank" class="col content">
+                    <!-- Image -->
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" class="row align-items-center">
+                <a href="mailto:mailtelenko@gmail.com" target="_blank" class="col content">
+                    <!-- Image -->
+                    <i class="far fa-envelope"></i>
+                </a>
+            </div>
         </div>
-        <div data-aos="fade-up" data-aos-delay="250" class="row align-items-center">
-            <a href="mailto:mailtelenko@gmail.com" target="_blank" class="col content">
-                <!-- Image -->
-                <i class="far fa-envelope"></i>
-            </a>
-        </div>
-    </div>
-
-    <div id="toggle_dark_mode">
-        <i id="toggle_light" class="far fa-moon"></i>
     </div>
 
     <!-- Footer -->
@@ -107,7 +112,7 @@
         disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
         debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
         throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-        
+
 
         // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
         offset: 120, // offset (in px) from the original trigger point
