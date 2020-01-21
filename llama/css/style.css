@@ -1,0 +1,36 @@
+/*
+    Liam Telenko
+    January/21/2020
+*/
+
+
+/* 
+    General
+*/
+* {
+    font-family: 'Muli', sans-serif!important;
+}
+
+
+/*
+    Header
+*/
+.header_title {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+.header {
+    z-index: -100;
+}
+
+/*
+    General body
+*/
+section {
+    background-color:white;
+    padding: 5vw;
+}
+
+.title{
+    margin:10px;
+}
