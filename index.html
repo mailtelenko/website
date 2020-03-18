@@ -10,7 +10,6 @@
 
     <title>Liam Telenko</title>
 
-
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -29,42 +28,133 @@
 
 <body>
     <!-- Header -->
-    <div data-aos="zoom-out-up" data-aos-delay="200" id="heading_section" class="container">
-        <div class="row align-items-center">
-            <div class="col-11 col-sm-11 col-md-10 col-lg-5 header mx-auto">
-                <!-- Dark mode toggle -->
-                <div id="dark_mode_toggle">
-                    <i id="toggle_light" class="far fa-moon"></i>
+    <div id="heading_section" class="container-fluid">
+        <div class="row">
+            <!-- Small header (bootstrap & static) -->
+            <div id="header_container" data-aos="zoom-out-up" data-aos-delay="200">
+                <div class="header">
+                    <!-- Dark mode toggle -->
+                    <div id="dark_mode_toggle">
+                        <i id="toggle_light" class="far fa-moon"></i>
+                    </div>
+                    <!-- Image -->
+                    <img src="resources/images/Liam_Telenko.jpg" alt="Profile Photo">
+                    <!-- Title -->
+                    <h1>Liam Telenko</h1>
+                    <!-- Description -->
+                    <div class="header_bottom" id="description">
+                        <p class="container_accent">I am a first year engineering student studying at McMaster
+                            University in
+                            Hamilton, Ontario.</p>
+                    </div>
+                    <!-- Main navigation buttons -->
+                    <div id="main_nav">
+                        <button onclick="display_resume()">View Resume</button>
+                        <button id="contact_button">Contact Information</button>
+                    </div>
+                    <!-- Resume navigation buttons -->
+                    <div id="res_nav">
+                        <button>Download Resume</button>
+                        <button onclick="hide_resume()">Return</button>
+                    </div>
                 </div>
-                <!-- Image -->
-                <img src="resources/images/Liam_Telenko.jpg" alt="Profile Photo">
-                <!-- Title -->
-                <h1>Liam Telenko</h1>
-                <!-- Description -->
-                <div id="description">
-                    <p>I am a first year engineering student studying at McMaster University in Hamilton, Ontario. I am
-                        an avid developer who creates fluid layouts and efficient code.</p>
-                </div>
-                <!-- Image -->
-                <i class="fas fa-chevron-down"></i>
             </div>
         </div>
-    </div>
 
-    <div id="lower_heading_section" class="container-fluid">
-        <div class="row align-items-center">
-            <div data-aos="fade-up" data-aos-delay="280" class="col">
-                <a id="about_button">
-                    <i class="far fa-id-badge"></i>
-                    <p>About</p>
-                </a>
+        <div id="sneaky_overlay"></div>
+
+        <div id="resume_row" class="row">
+            <!-- Resume SVG section -->
+            <div id="resume_section">
+                <div class="row">
+                    <img data-aos="zoom-out-right" data-aos-delay="600" class="icon col-lg-2"
+                        src="resources/images/icons/001-book.png">
+                    <div class="col-lg-2"></div>
+
+                    <!-- Clickable information box -->
+                    <div data-aos="zoom-in" data-aos-duration="500" class="resume_item col-lg-3">
+                        <img data-aos="zoom-out" data-aos-duration="620" src="resources/images/fireball.png">
+                        <div class="title_cont">
+                            <p class="title">McMaster University</p>
+                        </div>
+                    </div>
+
+                    <!-- Clickable information box -->
+                    <div data-aos="zoom-in" data-aos-duration="500" class="resume_item col-lg-3">
+                        <img data-aos="zoom-out" src="resources/images/wlmac.png">
+                        <div class="title_cont">
+                            <p class="title">W.L.Mac (MaCS)</p>
+                        </div>
+                        <div class="under_fold">
+                            <p>2015 - 2019</p>
+                            <p>This is a little bit of extra content. Blah blah blah. Pee pee.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <img data-aos="zoom-out-right" data-aos-delay="700" class="icon col-lg-2"
+                        src="resources/images/icons/002-chart.png">
+
+                    <div class="col-lg-2"></div>
+
+                    <!-- Clickable information box -->
+                    <div data-aos="zoom-in" data-aos-duration="500" class="resume_item col-lg-3">
+                        <img data-aos="zoom-out" data-aos-duration="620" src="resources/images/mcmaster.png">
+                        <div class="title_cont">
+                            <p class="title">IT Assistant</p>
+                        </div>
+                    </div>
+
+                    <!-- Clickable information box -->
+                    <div data-aos="zoom-in" data-aos-duration="500" class="resume_item col-lg-3">
+                        <img data-aos="zoom-out" src="resources/images/campkawartha.png">
+                        <div class="title_cont">
+                            <p class="title">Head of Ropes & Lifeguard</p>
+                        </div>
+                        <div class="under_fold">
+                            <p>2015 - 2019</p>
+                            <p>This is a little bit of extra content. Blah blah blah. Pee pee.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <img data-aos="zoom-out-right" data-aos-delay="850" class="icon col-lg-2"
+                        src="resources/images/icons/005-tick.png">
+
+                    <!-- Clickable information box -->
+                    <div data-aos="zoom-in" data-aos-duration="500" class="resume_item col-lg-3">
+                        <img data-aos="zoom-out" data-aos-duration="620" src="resources/images/cisco.png">
+                        <div class="title_cont">
+                            <p class="title">CISCO IT Essentials</p>
+                        </div>
+                    </div>
+
+                    <!-- Clickable information box -->
+                    <div data-aos="zoom-in" data-aos-duration="500" class="resume_item col-lg-3">
+                        <img data-aos="zoom-out" src="resources/images/cisco.png">
+                        <div class="title_cont">
+                            <p class="title">FIT Certified</p>
+                        </div>
+                        <div class="under_fold over_fold">
+                            <p>2015 - 2019</p>
+                            <p>This is a little bit of extra content. Blah blah blah. Pee pee.</p>
+                        </div>
+                    </div>
+
+                    <!-- Clickable information box -->
+                    <div data-aos="zoom-in" data-aos-duration="500" class="resume_item col-lg-3">
+                        <img data-aos="zoom-out" src="resources/images/cisco.png">
+                        <div class="title_cont">
+                            <p class="title">First Aid & CPR/AED Level C</p>
+                        </div>
+                        <div class="under_fold">
+                            <p>2015 - 2019</p>
+                            <p>This is a little bit of extra content. Blah blah blah. Pee pee.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div data-aos="fade-up" data-aos-delay="300" class="col">
-                <a id="contact_button">
-                    <i class="fas fa-phone"></i>
-                    <p>Contact</p>
-                </a>
-            </div>
+
         </div>
     </div>
 
@@ -98,7 +188,9 @@
 
     <!-- Footer -->
     <footer>
-        <p>© Liam Telenko 2019</p>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
+                href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <p>© Liam Telenko 2020</p>
     </footer>
 </body>
 
