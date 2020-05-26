@@ -40,11 +40,7 @@ $(".resume_item").click(function () {
     console.log($(".under_fold").css('display'));
     // Check if clicked item is open, if so, close it
     if ($(this).find(".under_fold").css("display") != "none") {
-        $(".under_fold").slideUp(300);
-        $("#sneaky_overlay").fadeOut(200);
-        setTimeout(function () {
-            $(".resume_item").css({"z-index": "1", "transform": "none"});
-        }, 300);
+        close_all_resume_items();
     } else {
         $("#sneaky_overlay").fadeIn(200);
         $(this).css({
@@ -55,6 +51,21 @@ $(".resume_item").click(function () {
         $(this).find(".under_fold").slideDown(300);
     }
 });
+
+$("#sneaky_overlay").click(function(){
+    close_all_resume_items();
+});
+
+function close_all_resume_items() {
+    $(".under_fold").slideUp(300);
+    $("#sneaky_overlay").fadeOut(200);
+    setTimeout(function () {
+        $(".resume_item").css({
+            "z-index": "1",
+            "transform": "none"
+        });
+    }, 300);
+}
 
 // Display resume page
 function display_resume() {
