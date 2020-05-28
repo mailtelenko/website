@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta Data -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="description" content="Infomation and methods of contact for Liam Telenko.">
+    <meta name="theme-color" content="#4286f4">
+
+    <title>Liam Telenko</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom Stylesheet-->
+    <link href="resources/css/css.css" type="text/css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="heading_section" class="container-fluid">
+        <div class="row">
+            <!-- Small header (bootstrap & static) -->
+            <div id="header_container" data-aos="zoom-out-up" data-aos-delay="200">
+                <div class="header">
+                    <!-- Dark mode toggle -->
+                    <div id="dark_mode_toggle">
+                        <i id="toggle_light" class="far fa-moon"></i>
+                    </div>
+                    <!-- Image -->
+                    <img src="resources/images/Liam_Telenko.jpg" alt="Profile Photo">
+                    <!-- Title -->
+                    <h1>Liam Telenko</h1>
+                    <!-- Description -->
+                    <div class="header_bottom" id="description">
+                        <p class="container_accent">I am a first year engineering student studying at McMaster
+                            University in
+                            Hamilton, Ontario.</p>
+                    </div>
+                    <!-- Main navigation buttons -->
+                    <div id="main_nav">
+                        <button onclick="display_resume()">View Resume</button>
+                        <button id="contact_button">Contact Information</button>
+                    </div>
+                    <!-- Resume navigation buttons -->
+                    <div id="res_nav">
+                        <button>Download Resume</button>
+                        <button onclick="hide_resume()">Return</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sneaky_overlay"></div>
+
+        <div id="resume_row" class="row">
+            <!-- Resume SVG section -->
+            <div id="resume_section">
+                <div class="row">
+                    <img data-aos="zoom-out-right" data-aos-delay="600" class="icon col-lg-2"
+                        src="resources/images/icons/001-book.png">
+                    <div class="col-lg-2"></div>
+
+                    <!-- Clickable information box -->
+                    <div data-aos="zoom-in" data-aos-duration="500" class="resume_item col-lg-3">
+                        <img data-aos="zoom-out" data-aos-duration="620" src="resources/images/fireball.png">
+                        <div class="title_cont">
+                            <p class="title">McMaster University</p>
+                        </div>
+                    </div>
+
+                    <!-- Clickable information box -->
+                    <div data-aos="zoom-in" data-aos-duration="500" class="resume_item col-lg-3">
+                        <img data-aos="zoom-out" src="resources/images/wlmac.png">
+                        <div class="title_cont">
+                            <p class="title">W.L.Mac (MaCS)</p>
+                        </div>
+                        <div class="under_fold">
+                            <p>2015 - 2019</p>
+                            <p>This is a little bit of extra content. Blah blah blah. Pee pee.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <img data-aos="zoom-out-right" data-aos-delay="700" class="icon col-lg-2"
+                        src="resources/images/icons/002-chart.png">
+
+                    <div class="col-lg-2"></div>
+
+                    <!-- Clickable information box -->
+                    <div data-aos="zoom-in" data-aos-duration="500" class="resume_item col-lg-3">
+                        <img data-aos="zoom-out" data-aos-duration="620" src="resources/images/mcmaster.png">
+                        <div class="title_cont">
+                            <p class="title">IT Technical Assistant</p>
+                        </div>
+                    </div>
+
+                    <!-- Clickable information box -->
+                    <div data-aos="zoom-in" data-aos-duration="500" class="resume_item col-lg-3">
+                        <img data-aos="zoom-out" src="resources/images/camp_kawartha.png">
+                        <div class="title_cont">
+                            <p class="title">Head of Ropes & Lifeguard</p>
+                        </div>
+                        <div class="under_fold">
+                            <p>2015 - 2019</p>
+                            <p>This is a little bit of extra content. Blah blah blah. Pee pee.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <img data-aos="zoom-out-right" data-aos-delay="850" class="icon col-lg-2"
+                        src="resources/images/icons/005-tick.png">
+
+                    <!-- Clickable information box -->
+                    <div data-aos="zoom-in" data-aos-duration="500" class="resume_item col-lg-3">
+                        <img data-aos="zoom-out" data-aos-duration="620" src="resources/images/cisco.png">
+                        <div class="title_cont">
+                            <p class="title">CISCO IT Essentials</p>
+                        </div>
+                    </div>
+
+                    <!-- Clickable information box -->
+                    <div data-aos="zoom-in" data-aos-duration="500" class="resume_item col-lg-3">
+                        <img data-aos="zoom-out" src="resources/images/ictc.png">
+                        <div class="title_cont">
+                            <p class="title">FIT Certified</p>
+                        </div>
+                        <div class="under_fold over_fold">
+                            <p>2015 - 2019</p>
+                            <p>This is a little bit of extra content. Blah blah blah. Pee pee.</p>
+                        </div>
+                    </div>
+
+                    <!-- Clickable information box -->
+                    <div data-aos="zoom-in" data-aos-duration="500" class="resume_item col-lg-3">
+                        <img data-aos="zoom-out" src="resources/images/red_cross.jpeg">
+                        <div class="title_cont">
+                            <p class="title">First Aid & CPR/AED Level C</p>
+                        </div>
+                        <div class="under_fold">
+                            <p>2015 - 2019</p>
+                            <p>This is a little bit of extra content. Blah blah blah. Pee pee.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Links -->
+    <div id="contact_section" class="container">
+        <div class="row align-items-center">
+            <div class="col-11 col-sm-12 col-md-12 mx-auto">
+                <h2 data-aos="fade-in">Let's get in touch.</h2>
+            </div>
+        </div>
+
+        <div class="col-11 col-sm-11 col-md-12 mx-auto">
+            <div data-aos="fade-up" data-aos-delay="50" class="row align-items-center">
+                <a href="https://github.com/mailtelenko" target="_blank" class="col content">
+                    <!-- Image -->
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/liamtelenko/" target="_blank" class="col content">
+                    <!-- Image -->
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" class="row align-items-center">
+                <a href="mailto:mailtelenko@gmail.com" target="_blank" class="col content">
+                    <!-- Image -->
+                    <i class="far fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
+                href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <p>© Liam Telenko 2020</p>
+    </footer>
+</body>
+
+<!-- Scripts -->
+<!-- JQuery -->
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 140, // values from 0 to 3000, with step 50ms
+        duration: 400, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    });
+</script>
+<!-- Custom -->
+<script src="resources/js/js.js"></script>
+
+</html>
