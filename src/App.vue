@@ -74,6 +74,12 @@ export default {
     Contact
   },
 
+  created() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      this.toggle_dark();
+    }
+  },
+
   methods: {
     toggle_dark() {
       if (!this.dark_mode)
@@ -369,7 +375,7 @@ button::-moz-focus-inner {
 }
 
 button:active {
-  transform: scale(.98);
+  transform: scale(0.98);
 }
 
 .button_icon {
@@ -548,7 +554,7 @@ button:active {
 }
 
 #dark_toggle:active {
-  transform: scale(.9);
+  transform: scale(0.9);
 }
 
 /*
@@ -611,7 +617,7 @@ hr {
   Mobile
 */
 @media only screen and (max-width: 1100px) {
-  #profile_container{
+  #profile_container {
     width: 30vw;
   }
 
@@ -621,7 +627,7 @@ hr {
 }
 
 @media only screen and (max-width: 800px) {
-  #profile_container{
+  #profile_container {
     width: 100vw;
   }
 
