@@ -1,37 +1,42 @@
 <template>
   <div class="container">
     <div class="profile">
-      <img class="profile_picture" src="@/assets/Liam_Telenko.jpg">
+      <img class="profile_picture" src="@/assets/Liam_Telenko.jpg" />
     </div>
-    
+
     <div class="bio">
-      <h1 class="title">Liam <br/> Telenko</h1>
-    
+      <h1 class="title">
+        Liam
+        <br />Telenko
+      </h1>
+
       <div class="info_container">
         <p>{{ bio }}</p>
       </div>
     </div>
 
     <div class="call_to_action">
-      <button @click="show_contact">Contact Me</button>
+      <button v-on:click="$emit('contact_button', 'show_contact')">Contact Me</button>
     </div>
-  </div>  
+  </div>
 </template>
 
 <script>
-  export default {
-    name: 'Profile',
+export default {
+  name: "Profile",
 
-    props: {
-      bio: String,
-    },
+  data() {
+    return {
+      show_contact: false
+    };
+  },
 
-    methods: {
-      show_contact() {
-        alert("contact info");
-      }
-    }
-  }
+  props: {
+    bio: String
+  },
+
+  methods: {}
+};
 </script>
 
 <style scoped>
@@ -41,11 +46,13 @@
 .container {
   width: 100%;
   height: 100vh;
-  margin:0px;
+  margin: 0px;
 
   position: relative;
 
-  background-color:white;
+  color: var(--default_text);
+
+  background-color: var(--panel_colour);
 }
 
 /*
@@ -54,21 +61,20 @@
 .profile {
   height: 40vh;
 
-  position:relative;
+  position: relative;
 }
 
 .profile_picture {
-  width: 15vw;
+  width: 55%;
 
   position: absolute;
   bottom: 4vh;
-  left: calc((25vw - 15vw)/2);
+  left: calc((100% - 55%) / 2);
 
   border-radius: 100%;
 
-  box-shadow:  0px 0px 15px rgba(0,0,0,.15);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
 }
-
 
 /*
   Bio section
@@ -78,8 +84,9 @@
   height: 50vh;
 }
 
-.bio div, h1{
-  padding: 0px 4vw;
+.bio div,
+h1 {
+  padding: 0px 15%;
 }
 
 .title {
@@ -90,14 +97,13 @@
 }
 
 .info_container {
+  height: calc(58vh - 8.5rem);
 
-  height: calc(60vh - 8.5rem);
-
-  line-height: calc(60vh - 12.5rem);
+  line-height: calc(58vh - 12.5rem);
 }
 
-p { 
-  margin:0px;
+p {
+  margin: 0px;
 
   display: inline-block;
   vertical-align: middle;
@@ -106,11 +112,26 @@ p {
 
 button {
   position: absolute;
-  
-  bottom: 25px;
-  left: calc((25vw - 155px)/2);
 
-  width:150px;
+  bottom: 25px;
+  left: calc((100% - 155px) / 2);
+
+  width: 150px;
 }
 
+@media (max-width: 800px) and (min-width: 600px) {
+  .profile_picture {
+    width: 40%;
+    left: calc((100% - 40%) / 2);
+  }
+
+  .bio div,
+  h1 {
+    padding: 0px 25%;
+  }
+
+  button {
+    bottom: 50px;
+  }
+}
 </style>
