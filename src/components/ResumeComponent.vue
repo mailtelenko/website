@@ -1,8 +1,11 @@
 <template>
-  <div class="resume_page" :class="{'half': display_props.size == 'half', 'no_timeline' : !display_props.timeline}">
+  <div
+    class="resume_page"
+    :class="{'half': display_props.size == 'half', 'slim': display_props.size == 'slim', 'no_timeline' : !display_props.timeline}"
+  >
     <ResumeElement
       class="resume_element"
-      :class="{'half': display_props.size == 'half', 'no_timeline' : !display_props.timeline }"
+      :class="{'half': display_props.size == 'half', 'slim': display_props.size == 'slim', 'no_timeline' : !display_props.timeline }"
       v-for="element in resume_elements"
       v-bind:key="element.name"
       :display_props="display_props"
@@ -52,7 +55,8 @@
   position: relative;
 }
 
-.resume_page.half {
+.resume_page.half,
+.resume_page.slim {
   display: inline-grid;
 
   grid-template-columns: 50% 50%;
@@ -63,6 +67,15 @@
   padding-right: 10px;
 
   width: calc(100% - 100px);
+}
+
+.resume_page.slim {
+  row-gap: 10px;
+  grid-template-columns: 45% 45%;
+
+  width: 100%;
+
+  padding-left: 0px;
 }
 
 .resume_element.half > div {
@@ -88,8 +101,23 @@
   transition-duration: 0.2s;
 }
 
-.resume_element.half .above_fold {
+.resume_element.half .above_fold,
+.resume_element.slim .above_fold {
+  width: 100%;
+}
+
+.resume_element.slim > div {
+  max-height: 60px;
+  min-height: 60px;
+
+  grid-template-columns: 80% 20%;
+
   width: 80%;
+}
+
+.resume_element.slim > div:hover {
+  max-height: 60px !important;
+  min-height: 60px !important;
 }
 </style>
 

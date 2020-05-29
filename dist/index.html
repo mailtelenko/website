@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><title>Liam Telenko</title><link href=/css/app.ec332b12.css rel=preload as=style><link href=/js/app.9b52ec1c.js rel=preload as=script><link href=/js/chunk-vendors.da864559.js rel=preload as=script><link href=/css/app.ec332b12.css rel=stylesheet></head><body><noscript><strong>We're sorry but personal_site doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/js/chunk-vendors.da864559.js></script><script src=/js/app.9b52ec1c.js></script></body><script>window.addEventListener("DOMContentLoaded", function () {
+
+    // get the form elements defined in your form HTML above
+
+    var form = document.getElementById("contact_form");
+    var button = document.getElementById("contact-form-button");
+    var status = document.getElementById("contact-form-status");
+    var success_button = document.getElementById("contact-form-succ");
+
+    // Success and Error functions for after the form is submitted
+
+    function success() {
+      form.reset();
+      success_button.click();
+    }
+
+    function validateEmail(email) {
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+    }
+
+    function error() {
+      status.innerHTML = "Oops! Looks like something went wrong. Email me directly at mailtelenko@gmail.com.";
+    }
+
+    function specific_error(msg) {
+      status.innerHTML = msg;
+    }
+
+    // handle the form submission event
+
+    button.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      var data = new FormData(form);
+      
+      // Make sure form is fully filled
+      if (data.get("name")== "" || data.get("email") == "" ||  data.get("message") == "")
+        return specific_error("Oops! Please fully fill out the form.");
+      
+      if (!validateEmail(data.get("email")))
+        return specific_error("Oops! Please enter a valid email address.");
+        
+      ajax(form.method, form.action, data, success, error);
+    });
+  });
+
+  // helper function for sending an AJAX request
+
+  function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        success(xhr.response, xhr.responseType);
+      } else {
+        error(xhr.status, xhr.response, xhr.responseType);
+      }
+    };
+    xhr.send(data);
+  }</script></html>

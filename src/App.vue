@@ -75,7 +75,10 @@ export default {
   },
 
   created() {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
       this.toggle_dark();
     }
   },
@@ -250,6 +253,71 @@ export default {
               name: "WHMIS",
               dates: "2018",
               image: "whmis.jpg",
+              accent: "rgba(0,0,0,0)"
+            }
+          ]
+        },
+        skills: {
+          name: "skills",
+          icon: ["fas", "pencil-alt"],
+          display_props: {
+            timeline: false,
+            size: "slim",
+            expand: false
+          },
+          elements: [
+            {
+              name: "HTML",
+              dates: "★ ★ ★ ★ ★",
+              image: "html5.jpg",
+              accent: "rgba(21 , 73, 91, .2)"
+            },
+            {
+              name: "CSS",
+              dates: "★ ★ ★ ★ ☆",
+              image: "css3.jpeg",
+              accent: "rgba(0,0,0,0)"
+            },
+            {
+              name: "JavaScript",
+              dates: "★ ★ ★ ★ ☆",
+              image: "javascript.jpeg",
+              accent: "rgba(0,0,0,0)"
+            },
+            {
+              name: "Python",
+              dates: "★ ★ ★ ☆ ☆",
+              image: "python.jpg",
+              accent: "rgba(0,0,0,0)"
+            },
+            {
+              name: "Java",
+              image: "java.jpg",
+              dates: "★ ★ ★ ★ ☆",
+              accent: "rgba(0,0,0,0)"
+            },
+            {
+              name: "Microsoft Office",
+              image: "office.jpeg",
+              dates: "★ ★ ★ ★ ★",
+              accent: "rgba(0,0,0,0)"
+            },
+            {
+              name: "Google GSuite",
+              image: "gsuite.jpeg",
+              dates: "★ ★ ★ ★ ★",
+              accent: "rgba(0,0,0,0)"
+            },
+            {
+              name: "Autodesk Inventor",
+              image: "inventor.jpg",
+              dates: "★ ★ ★ ☆ ☆",
+              accent: "rgba(0,0,0,0)"
+            },
+            {
+              name: "Vue JS",
+              image: "vue.jpg",
+              dates: "★ ★ ★ ☆ ☆",
               accent: "rgba(0,0,0,0)"
             }
           ]
