@@ -123,7 +123,7 @@ export default {
     return {
       resume_section: "",
       bio:
-        "I am a second year engineering student studying at McMaster University in Hamilton, Ontario. I am an avid developer who creates fluid layouts and efficient code.",
+        "I am a second year computer engineering student studying at McMaster University in Hamilton, Ontario. I am an avid developer who creates fluid layouts and efficient code.",
 
       dark_mode: false,
       show_contact: false,

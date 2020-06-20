@@ -70,15 +70,17 @@
 }
 
 .resume_page.slim {
-  row-gap: 10px;
+  row-gap: 30px;
   grid-template-columns: 45% 45%;
 
   width: 100%;
 
-  padding-left: 0px;
+  padding-left: 90px;
+    width: calc(100% - 50px);
 }
 
-.resume_element.half > div {
+.resume_element.half > div,
+.resume_element.slim > div {
   width: calc(100% - 100px);
 
   display: inline-block;
@@ -90,6 +92,15 @@
   height: 110px;
 
   transition-duration: 0.2s;
+}
+
+.resume_element.slim > div {
+  max-height: 60px;
+  min-height: 60px;
+
+  grid-template-columns: 100% 0%;
+
+  width: calc(100% - 100px);
 }
 
 .resume_element.half > div:hover {
@@ -106,18 +117,10 @@
   width: 100%;
 }
 
-.resume_element.slim > div {
-  max-height: 60px;
-  min-height: 60px;
-
-  grid-template-columns: 80% 20%;
-
-  width: 80%;
-}
-
 .resume_element.slim > div:hover {
   max-height: 60px !important;
   min-height: 60px !important;
+  box-shadow: -1px 6px 15px var(--box_shadow_colour);
 }
 </style>
 
