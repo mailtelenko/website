@@ -109,8 +109,9 @@ export default {
 
 <style scoped>
 .container {
-  height: 86vh;
+  height: auto;
   max-width: 350px;
+  max-height: calc(94vh - 60px);
 
   position: absolute;
   right: 0px;
@@ -119,7 +120,7 @@ export default {
 
   border-radius: 5px;
 
-  padding: 4vh 4vw;
+  padding: 30px 50px;
 
   overflow: auto;
 
@@ -139,7 +140,7 @@ h2 {
   border-radius: 4px;
 
   margin: auto;
-  margin-top: 8vh;
+  margin-top: 35px;
 }
 
 form {
@@ -165,6 +166,7 @@ form {
   padding: 0px 0px 7px 0px;
 
   width: 100%;
+  max-width: 100%;
 
   margin-bottom: 55px;
 
@@ -221,11 +223,11 @@ label {
 #contact-form-button {
   float: right;
 
-  position: absolute;
-  bottom: -20vh;
+  position: relative;
+  bottom: 0vh;
   right: -40px;
 
-  margin: 60px 0px 10px 0px;
+  margin: 55px 0px 10px 0px;
 }
 
 /*

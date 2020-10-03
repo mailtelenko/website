@@ -142,7 +142,7 @@ export default {
             {
               name: "McMaster University",
               dates: "2019 - Present",
-              description: "Bachelor of Engineering (co-op)",
+              description: "Computer Engineering (co-op)",
               image: "mcmaster.jpg",
               points: [
                 {
@@ -183,7 +183,22 @@ export default {
           elements: [
             {
               name: "McMaster University",
-              dates: "2020",
+              dates: "2020 - Office of the Registrar",
+              description: "Web and Desktop Applications Assistant",
+              points: [
+                {
+                  title: "Responsibilities",
+                  content:
+                    "<ul class='expand_list'><li>Provide remote support for users in a variety of hardware and software environments.</li><li>Assist with inventory of computer hardware/software within the Office of the Registrar.</li></ul>"
+                }
+              ],
+              image: "mcmaster2.jpg",
+              location: "Hamilton, ON",
+              accent: "rgba(202 , 111, 0, .2)"
+            },
+            {
+              name: "McMaster University",
+              dates: "2020 - Housing and Conference Services",
               description: "Information Technology Assistant",
               points: [
                 {
