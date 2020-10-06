@@ -637,7 +637,7 @@ button:active {
 }
 
 #dark_toggle:active {
-  transform: scale(0.9);
+  transform: scale(0.9) rotate(-30deg);
 }
 
 /*
