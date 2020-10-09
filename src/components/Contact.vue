@@ -1,46 +1,46 @@
 <template>
-  <div class="container panel">
-    <h2>Let's get in touch</h2>
-    <p>Fill in the form below and I'll get back to you as soon as possible</p>
+    <div class="container panel">
+      <h2>Let's get in touch</h2>
+      <p>Fill in the form below and I'll get back to you as soon as possible</p>
 
-    <div class="form_container">
-      <form v-if="!form_submitted" @submit.prevent="send_form" id="contact_form">
-        <input class="input" v-model="name" placeholder type="text" name="name" />
-        <label>Name:</label>
-        <input class="input" v-model="email" ref="email" placeholder type="email" name="email" />
-        <label>Email:</label>
-        <textarea
-          id="message"
-          v-model="message"
-          class="input"
-          placeholder
-          type="text"
-          name="message"
-        ></textarea>
-        <label>Message:</label>
+      <div class="form_container">
+        <form v-if="!form_submitted" @submit.prevent="send_form" id="contact_form">
+          <input class="input" v-model="name" placeholder type="text" name="name" />
+          <label>Name:</label>
+          <input class="input" v-model="email" ref="email" placeholder type="email" name="email" />
+          <label>Email:</label>
+          <textarea
+            id="message"
+            v-model="message"
+            class="input"
+            placeholder
+            type="text"
+            name="message"
+          ></textarea>
+          <label>Message:</label>
 
-        <button v-if="!form_submitted" id="contact-form-button">
-          <font-awesome-icon class="button_icon" icon="paper-plane" />Submit
-        </button>
-      </form>
+          <button v-if="!form_submitted" id="contact-form-button">
+            <font-awesome-icon class="button_icon" icon="paper-plane" />Submit
+          </button>
+        </form>
 
-      <div v-if="form_submitted" id="form_success">
-        <font-awesome-icon class="success_icon" icon="thumbs-up" />
-        <h3>Thanks!</h3>
-        <p>Your message sent successfully, we'll be in touch.</p>
+        <div v-if="form_submitted" id="form_success">
+          <font-awesome-icon class="success_icon" icon="thumbs-up" />
+          <h3>Thanks!</h3>
+          <p>Your message sent successfully, we'll be in touch.</p>
+        </div>
       </div>
-    </div>
 
-    <button v-show="form_submitted" @click="$emit('close_contact')" id="close">Close</button>
-    <p
-      v-show="form_error"
-      id="contact-form-status"
-    >Oops! Looks like something went wrong. Please send me an email at mailtelenko@gmail.com.</p>
-    <p
-      v-show="not_filled"
-      id="contact-form-status"
-    >Oops! Please make sure the entire form is filled out.</p>
-  </div>
+      <button v-show="form_submitted" @click="$emit('close_contact')" id="close">Close</button>
+      <p
+        v-show="form_error"
+        id="contact-form-status"
+      >Oops! Looks like something went wrong. Please send me an email at mailtelenko@gmail.com.</p>
+      <p
+        v-show="not_filled"
+        id="contact-form-status"
+      >Oops! Please make sure the entire form is filled out.</p>
+    </div>
 </template>
 
 <script>
@@ -263,5 +263,11 @@ label {
 
 #contact-form-succ {
   display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    box-shadow: 0px 3px 15px var(--box_shadow_colour);
+  }
 }
 </style>
