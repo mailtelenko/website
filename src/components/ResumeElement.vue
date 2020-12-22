@@ -11,7 +11,7 @@
         <p class="year">{{ element_data.dates }}</p>
 
         <div class="intro">
-          <p>{{ element_data.description }}</p>
+          <p v-html="element_data.description"></p>
         </div>
       </div>
 
@@ -21,11 +21,12 @@
           {{ element_data.location }}
         </p>
 
-        <div id="expand_points_cont">
-          <div class="expand_point" v-for="point in element_data.points" v-bind:key="point.title">
-            <h4>{{ point.title }}</h4>
-            <td class="expand_point_content" v-html="point.content"></td>
-          </div>
+        <div
+          id="expand_points_cont"
+          v-on:click="click_point"
+          v-bind:class="{ 'expand' : expand_element}"
+        >
+          <CardScroll :element_data="element_data"></CardScroll>
         </div>
       </div>
     </div>
@@ -33,9 +34,8 @@
 </template>
 
 <style scoped>
-
 .resume_element::after {
-  content: ' ';
+  content: " ";
 
   width: 16px;
   height: 16px;
@@ -44,10 +44,10 @@
 
   position: absolute;
 
-  left: 28px;
-  top: 70px;
+  left: 29px;
+  top: 71px;
 
-  border: solid 6px var(--accent_colour);
+  border: solid 5px var(--panel_dark_embed);
   border-radius: 100%;
 }
 
@@ -56,7 +56,7 @@
 
   padding: 35px 30px;
   min-height: 120px;
-  max-height: 120px;
+  max-height: 130px;
 
   background-size: cover;
   background-position: center;
@@ -69,7 +69,7 @@
 
   width: calc(100% - 90px - (35px * 2) - 30px);
 
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 45% 55%;
   grid-template-rows: auto;
 
   border-radius: 8px;
@@ -78,9 +78,12 @@
   box-shadow: -1px 6px 15px var(--box_shadow_colour);
 }
 
-
 .expand > div {
   max-height: 800px;
+
+  grid-template-columns: 40% 60%;
+
+  overflow-x: visible !important;
 
   transition-duration: 1s;
 }
@@ -88,6 +91,8 @@
 .resume_element h3 {
   height: auto;
   margin: 0px;
+
+  white-space: nowrap;
 
   font-size: 1.5rem;
 }
@@ -98,7 +103,7 @@
 
   position: relative;
 
-  height: 1.1rem;
+  height: auto;
 
   font-size: 1.1rem;
 }
@@ -110,6 +115,7 @@
   font-size: 1.15rem;
   height: calc(120px - 1.15rem - 40px);
   line-height: calc(120px - 1.15rem - 30px);
+  word-wrap: none;
 }
 
 .resume_element .location {
@@ -141,36 +147,15 @@
 }
 
 .resume_element > div:hover {
-  max-height: 130px;
+  max-height: 140px;
 
   box-shadow: -3px 8px 20px var(--box_shadow_colour_intense);
-
 }
 
 .expanded:hover {
   max-height: 800px !important;
 
   box-shadow: -3px 8px 20px var(--box_shadow_colour_intense);
-}
-
-.expand_point {
-  background-color: var(--panel_overlay);
-
-  padding: 1px 20px 15px 30px;
-
-  border-radius: 10px;
-
-  width: calc(100% - 60px);
-
-  margin-bottom: 20px;
-  margin-left: 5px;
-
-  box-shadow: -2px 8px 8px var(--box_shadow_colour);
-}
-
-.expand_point h4 {
-  font-size: 1.3rem;
-  margin-bottom: 20px;
 }
 
 #expand_points_cont {
@@ -187,11 +172,11 @@
 
   max-height: 0px;
 
-  overflow: hidden;
+  overflow: visible;
 
   opacity: 0;
 
-  transition-duration: .8s;
+  transition-duration: 0.8s;
 }
 
 .expand_below_fold {
@@ -201,16 +186,22 @@
 
   opacity: 1;
 
-  transition-duration: .8s;
+  transition-duration: 0.8s;
 }
 </style>
 
 <script>
+import CardScroll from "./CardScroll.vue";
+
 export default {
   props: {
     title: String,
     element_data: Object,
     display_props: Object
+  },
+
+  components: {
+    CardScroll
   },
 
   data: function() {
@@ -228,6 +219,11 @@ export default {
       if (this.display_props.expand) {
         this.expand_element = !this.expand_element;
       }
+    },
+
+    click_point(event) {
+      if (this.expand_element) 
+        event.stopPropagation();
     }
   }
 };

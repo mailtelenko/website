@@ -23,13 +23,18 @@ export let data = {
                 {
                     name: "McMaster University",
                     dates: "2019 - Present",
-                    description: "Computer Engineering (co-op)",
+                    description: "Computer Engineering <br/>(co-op)",
                     image: "mcmaster.jpg",
                     points: [
                         {
                             title: "Course Highlights",
                             content:
                                 "<span class='bold_text'>Engineering Computation</span><ul class='expand_list'><li>Analysed and implemented algorithms in Python</li><li>Studied best practices and methods of development</li></ul><hr/><span class='bold_text'>Engineering Profession & Practice</span><ul class='expand_list'><li>Developed strong interpersonal and team building skills.</li><li>Studied the ethics and expectations of working in a professional setting.</li></ul>"
+                        },
+                        {
+                            title: "Course 2",
+                            content:
+                                "<span class='bold_text'>Engineering 2</span><ul class='expand_list'><li>Analysed and implemented algorithms in Python</li><li>Studied best practices and methods of development</li></ul><hr/><span class='bold_text'>Engineering Profession & Practice</span><ul class='expand_list'><li>Developed strong interpersonal and team building skills.</li><li>Studied the ethics and expectations of working in a professional setting.</li></ul>"
                         }
                     ],
                     location: "Hamilton, ON",
@@ -39,7 +44,7 @@ export let data = {
                     name: "William Lyon Mackenzie",
                     dates: "2019 - Present",
                     location: "Toronto, ON",
-                    description: "OSSD, MaCS (Math and Computer Science)",
+                    description: "MaCS (Math and Computer Science)<br/>OSSD",
                     points: [
                         {
                             title: "Course Highlights",
@@ -64,8 +69,8 @@ export let data = {
             elements: [
                 {
                     name: "McMaster University",
-                    dates: "2020 - Office of the Registrar",
-                    description: "Web and Desktop Applications Assistant",
+                    dates: "2020 - Present",
+                    description: "Web and Desktop Applications Assistant<br/>Office of the Registrar",
                     points: [
                         {
                             title: "Responsibilities",
@@ -79,8 +84,8 @@ export let data = {
                 },
                 {
                     name: "McMaster University",
-                    dates: "2020 - Housing and Conference Services",
-                    description: "Information Technology Assistant",
+                    dates: "2020",
+                    description: "Information Technology Assistant<br/>Housing and Conference Services",
                     points: [
                         {
                             title: "Responsibilities",

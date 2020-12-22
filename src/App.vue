@@ -341,7 +341,7 @@ button:active {
 .dropdown_active {
   border-width: 3px !important;
 
-  border-color: var(--accent_colour) !important;
+  border-color: var(--accent_opp) !important;
 
   transition-duration: 0.1s !important;
 }

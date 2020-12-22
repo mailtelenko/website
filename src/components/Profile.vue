@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="profile">
-      <img class="profile_picture" src="@/assets/Liam_Telenko.jpg" />
+      <img class="profile_picture" alt="Profile picture" src="@/assets/Liam_Telenko.jpg" />
     </div>
 
     <div class="bio">
