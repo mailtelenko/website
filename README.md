@@ -1,4 +1,4 @@
-# personal_site
+# Personal Website
 
 ## Project setup
 ```
@@ -10,15 +10,6 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Project Deployment
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Push to master branch. GitHub actions will automatically build and deploy project.
