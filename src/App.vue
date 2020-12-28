@@ -35,7 +35,12 @@
 
       <div v-show="resume_section == ''" id="starting_page">
         <font-awesome-icon id="point_icon" icon="hand-point-up" />
-        <h3>Select an item from the list above to get started</h3>
+        <h3>Select an item from the list above to get started or download a copy of my resume below.</h3>
+        <form method="get" action="Liam Telenko Resume.pdf">
+          <button id="download_button" type='submit'>
+            <font-awesome-icon icon="file-alt" />Download Resume
+          </button>
+        </form>
       </div>
 
       <ResumeComponent
@@ -67,7 +72,7 @@ import Profile from "./components/Profile.vue";
 import ResumeComponent from "./components/ResumeComponent.vue";
 import Contact from "./components/Contact.vue";
 
-import * as info from './assets/data.js';
+import * as info from "./assets/data.js";
 
 export default {
   name: "App",
@@ -341,7 +346,7 @@ button:active {
 .dropdown_active {
   border-width: 3px !important;
 
-  border-color: var(--accent_colour) !important;
+  border-color: var(--accent_opp) !important;
 
   transition-duration: 0.1s !important;
 }
@@ -431,7 +436,10 @@ button:active {
 #starting_page {
   text-align: center;
 
-  line-height: 70vh;
+  margin-top: 35vh;
+  margin-left: 10%;
+
+  width: 80%;
 }
 
 #point_icon {
@@ -442,7 +450,18 @@ button:active {
 
   position: absolute;
 
+  top: 125px;
   left: calc(30px + (14 * 1rem) + 120px);
+}
+
+#download_button {
+  text-align: center;
+
+  margin-top: 30px;
+}
+
+#download_button .fa-file-alt {
+  padding-right: 10px;
 }
 
 /*

@@ -19,8 +19,9 @@
   content: "   ";
   position: absolute;
 
-  background-color: var(--accent_opp_highlight);
-
+  /*background-color: var(--accent_opp_highlight);
+*/
+  background-color: var(--box_shadow_colour);
   width: 4px;
   height: calc(100% - 140px);
 
