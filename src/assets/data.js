@@ -27,14 +27,19 @@ export let data = {
                     image: "mcmaster.jpg",
                     points: [
                         {
-                            title: "Course Highlights",
+                            title: "Course Highlights 2020",
                             content:
-                                "<span class='bold_text'>Engineering Computation</span><ul class='expand_list'><li>Analysed and implemented algorithms in Python</li><li>Studied best practices and methods of development</li></ul><hr/><span class='bold_text'>Engineering Profession & Practice</span><ul class='expand_list'><li>Developed strong interpersonal and team building skills.</li><li>Studied the ethics and expectations of working in a professional setting.</li></ul>"
+                                "<span class='bold_text'>Principles of Programming</span><ul class='expand_list'><li>Learned C and Java by designing and implementing programs.</li><li>Studied the structure and uses of low and high level languages.</li></ul><hr/><span class='bold_text'>Logic Design</span><ul class='expand_list'><li>Analysed the operation of logic gates and combinational, and sequential circuits.</li><li>Designed and tested logic using Verilog HDL.</li></ul>"
                         },
                         {
-                            title: "Course 2",
+                            title: "Club - McMaster Formula Electric",
                             content:
-                                "<span class='bold_text'>Engineering 2</span><ul class='expand_list'><li>Analysed and implemented algorithms in Python</li><li>Studied best practices and methods of development</li></ul><hr/><span class='bold_text'>Engineering Profession & Practice</span><ul class='expand_list'><li>Developed strong interpersonal and team building skills.</li><li>Studied the ethics and expectations of working in a professional setting.</li></ul>"
+                                "<p><a href='https://macformularacing.com/' target='_blank'>MAC Formula Electric</a> is a student run team working on designing and fabricating an electric 1/4 scale formula style racecar.<br/><br/>I am apart of the software and controls team which works on implementing the various digital systems across the vehicle using technologies such as CAN.</p><hr/><span class='bold_text'>Projects</span><ul class='expand_list'><li>Developing a customizable dashboard interface using interpreted CAN bus information.</li></ul>"
+                        },
+                        {
+                            title: "Course Highlights 2019",
+                            content:
+                                "<span class='bold_text'>Engineering Computation</span><ul class='expand_list'><li>Analysed and implemented algorithms in Python</li><li>Studied best practices and methods of development</li></ul><hr/><span class='bold_text'>Engineering Profession & Practice</span><ul class='expand_list'><li>Developed strong interpersonal and team building skills.</li><li>Studied the ethics and expectations of working in a professional setting.</li></ul>"
                         }
                     ],
                     location: "Hamilton, ON",
@@ -70,12 +75,12 @@ export let data = {
                 {
                     name: "McMaster University",
                     dates: "2020 - Present",
-                    description: "Web and Desktop Applications Assistant<br/>Office of the Registrar",
+                    description: "<b>Web and Desktop Applications Assistant</b><br/>Office of the Registrar",
                     points: [
                         {
                             title: "Responsibilities",
                             content:
-                                "<ul class='expand_list'><li>Provide remote support for users in a variety of hardware and software environments.</li><li>Assist with inventory of computer hardware/software within the Office of the Registrar.</li></ul>"
+                                "<ul class='expand_list'><li>Provide remote support for users in a variety of hardware and software environments.</li><li>Work with members of the department to solve and thoroughly document issues as they arise.</li><li>Perform maintenance on user and backend systems.</li></ul>"
                         }
                     ],
                     image: "mcmaster2.jpg",
@@ -85,7 +90,7 @@ export let data = {
                 {
                     name: "McMaster University",
                     dates: "2020",
-                    description: "Information Technology Assistant<br/>Housing and Conference Services",
+                    description: "<b>Information Technology Assistant</b><br/>Housing and Conference Services",
                     points: [
                         {
                             title: "Responsibilities",
@@ -100,7 +105,7 @@ export let data = {
                 {
                     name: "Camp Kawartha",
                     dates: "2018 - 2020",
-                    description: "Head of Ropes & Lifeguard.",
+                    description: "<b>Head of Ropes & Lifeguard</b>",
                     location: "Douro-Dummer, ON",
                     image: "ck.JPG",
                     points: [
@@ -218,7 +223,7 @@ export let data = {
                 {
                     name: "Vue JS",
                     image: "vue.jpg",
-                    dates: "★ ★ ★ ☆ ☆",
+                    dates: "★ ★ ☆ ☆ ☆",
                     accent: "rgba(0,0,0,0)"
                 }
             ]

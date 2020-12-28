@@ -81,7 +81,7 @@
 .expand > div {
   max-height: 800px;
 
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 35% 60%;
 
   overflow-x: visible !important;
 
@@ -95,6 +95,10 @@
   white-space: nowrap;
 
   font-size: 1.5rem;
+}
+
+.resume_element.half h3, .resume_element.slim h3 {
+  white-space: normal;
 }
 
 .resume_element .year {
