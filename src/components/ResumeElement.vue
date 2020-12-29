@@ -81,7 +81,7 @@
 .expand > div {
   max-height: 800px;
 
-  grid-template-columns: 35% 60%;
+  grid-template-columns: 45% 55%;
 
   overflow-x: visible !important;
 
@@ -170,7 +170,7 @@
 }
 
 .below_fold {
-  width: 95%;
+  width: 100%;
 
   display: inline-block;
 
