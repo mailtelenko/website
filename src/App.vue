@@ -243,6 +243,10 @@ button:hover {
   transition-duration: 0.2s;
 }
 
+button:focus {
+  outline: 0;
+}
+
 button::-moz-focus-inner {
   border: 0;
 }

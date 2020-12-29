@@ -44,12 +44,12 @@ button {
 }
 
 #previous_card {
-  left: -24px;
+  left: -20px;
   padding-left: 20px;
 }
 
 #next_card {
-  right: -24px;
+  right: -20px;
 }
 </style>
 
