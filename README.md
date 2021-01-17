@@ -12,4 +12,4 @@ npm run serve
 
 ## Project Deployment
 
-Push to master branch. GitHub actions will automatically build and deploy project.
+Create a pull request to master branch. GitHub actions will automatically build and deploy the project.
